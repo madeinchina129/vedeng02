@@ -910,9 +910,9 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="image-xlg-view" style = "display:none;">
+                        <!--<div class="image-xlg-view" style = "display:none;">
                             <img src="images/category/14537950328192(2).jpg">
-                        </div>
+                        </div>-->
                         <div class="action-bar">
                             <p class="jiathis_style right">
                                 <span class="jiathis_txt">分享</span> <a href="#" class="" target="_blank"></a>
@@ -922,12 +922,12 @@
                         </div>
                     </div>
                     <div class="product-brief">
-                        <h2>
-                            OLYMPUS奥林巴斯 显微镜CX23 <br>
+                        <h2 id = "pName">
+                            <!--OLYMPUS奥林巴斯 显微镜CX23--> <br>
                             <small><h5><span style="color: rgb(227, 55, 55);">奥林巴斯显微镜CX21和CX22升级替代型号，选型报价找贝登，专业可靠，当天发货。</span></h5></small>
                         </h2>
 
-                        <dl class="product-infos-list">
+                        <dl id = "pList" class="product-infos-list">
                             <dl>
                                 <dt>批准文号:</dt>
                                 <dd><a target="_blank" href="#">粤械注准20152220084</a>&nbsp;&nbsp;<a target="_blank" href="#">批准文号查询</a>
@@ -937,11 +937,11 @@
                                     二类医疗器械
                                 </dd>
                                 <dt>品牌:</dt>
-                                <dd>OLYMPUS奥林巴斯</dd>
+                                <dd id = "pp"><!--OLYMPUS奥林巴斯--></dd>
                                 <dt>型号:</dt>
-                                <dd>CX23</dd>
+                                <dd id = "xh"><!--CX23--></dd>
                                 <dt>货号:</dt>
-                                <dd>V149573</dd>
+                                <dd id = "hh"><!--V149573--></dd>
                                 <dt>服务商:</dt>
                                 <dd>由贝登发货并提供售后服务 <em>咨询热线：4006-999-569</em></dd>
                                 <dt id="has_price_dt" class="hide">贝登价:</dt>
@@ -953,7 +953,7 @@
 										</span>
                                     </p>
                                 </dd>
-
+                                <button id="j" style="width:15px;">-</button><input style="width:20px;" type="text" id="num" value="0"><button id="jia" style="width:15px;">+</button>
 
                                 <dt>&nbsp;</dt>
                                 <br class="btn-container">
@@ -964,7 +964,6 @@
                                     <a target="_blank" class="btn btn-lg btn-primary" id="contact_qq" href="#" title="QQ咨询">QQ咨询</a>
                                     <a target="_blank" class="btn btn-lg btn-primary" id="contact_cart" href="#" title="添加购物车">添加购物车</a></br>
 
-                                </dd>
                             </dl>
                         </dl>
                     </div>
@@ -1644,6 +1643,7 @@
 <script src="js/produCtategory.js"></script>
 <script src="js/backTop.js"></script>
 <script type="text/javascript" src="js/magnifier.js" ></script>
+<script type = "text/javascript" src = "js/cookieTools.js"></script>
 <script>
 /*$(function(){
     $(".image-lg-view").onmouseenter= function(){
@@ -1673,5 +1673,64 @@ window.onload = function(){
         });
     }
 }
+console.log(getCookie("goodid"))
+var id=getCookie("goodid")
+
+
+$.ajax({
+    url: 'php/getGoodsInfo.php',
+    type: 'get',
+    //asyc:false,
+    data: {"goodsId":id},
+
+    success:function (data){
+        console.log(data)
+       var d =	eval('(' + data + ')')
+
+        /*var str=        '<dl>'
+                    +   '<dd><a target="_blank" href="#">粤械注准20152220084</a>&nbsp;&nbsp;<a target="_blank" href="#">批准文号查询</a></dd>'
+                    +   '<dt>类别:</dt>'
+                    +   '<dd>二类医疗器械 </dd>'
+                    +   '<dt>品牌:</dt>'
+                    +   '<dd>OLYMPUS奥林巴斯</dd>'
+                    +   '<dt>型号:</dt>'
+                    +   '<dd>CX23</dd>'
+                    +   '<dt>货号:</dt>'
+                    +   '<dd>V149573</dd>'
+                    +   '<dt>服务商:</dt>'
+                    +   '<dd>由贝登发货并提供售后服务 <em>咨询热线：4006-999-569</em></dd>'
+                    +   '<dt id="has_price_dt" class="hide">贝登价:</dt>'
+                    +   '<dd id="has_price_dd" class="price-container hide"> <p class="price"> <strong id="price_span"></strong>元 <span class="text-muted">市场价: <del id="shop_price_span"></del>元 </span> </p> </dd>'
+                    +   '<button id="j" style="width:15px;">-</button><input style="width:20px;" type="text" id="num" value="0"><button id="jia" style="width:15px;">+</button>'
+                    +   '<dt>&nbsp;</dt>'
+                    +   '<br class="btn-container">'
+                    +   '<input name="_csrf" type="hidden" id="_csrf" value=""> <input type="hidden" name="item_spec_price_id" id="item_spec_price_id" value="5473">'
+                    +   '<input type="hidden" name="item_id" id="item_id" value="149573">'
+                    +   '<a href="#" class="btn btn-lg btn-primary" onclick="" id="contact_tjxj">提交询价</a>'
+                    +   '<a target="_blank" class="btn btn-lg btn-primary" id="contact_zxxj" href="#" title="在线询价">在线询价</a>'
+                    +   '<a target="_blank" class="btn btn-lg btn-primary" id="contact_qq" href="#" title="QQ咨询">QQ咨询</a>'
+                    +   '<a target="_blank" class="btn btn-lg btn-primary" id="contact_cart" href="#" title="添加购物车">添加购物车</a></br>'
+
+                    +   '</dl>';*/
+        $("#pName").html(d.goodsName);
+        $("#pp").html(d.goodsDesc);
+        $("#xh").html(d.goodsType);
+        $("#hh").html(d.beiyong1);
+    }
+});
+$("#j").click(function(){
+    let num = Number($("#num").val())
+    num--;
+    if(num<=0){
+        num=1
+    }
+    $("#num").val(num)
+})
+$("#jia").click(function(){
+    let num = Number($("#num").val())
+    num++;
+
+    $("#num").val(num)
+})
 
 </script>

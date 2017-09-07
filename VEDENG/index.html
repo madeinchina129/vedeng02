@@ -46,6 +46,7 @@
                         <li>欢迎来到贝登医疗</li>
                         <li><span id="plogina">请登录</span></li>
                         <li><span id="pregb">免费注册</span></li>
+                        <li><a id="exit" href="#">退出</a></li>
                     </ul>
                 </div>
             </div>
@@ -1436,10 +1437,19 @@
         document.getElementById("loginBefor").style = "display:none";
         document.getElementById("loginAfter").style = "display:block;color:#f60";
         document.getElementById("loginReg").style = "display:none;";
-       // document.getElementById("pLogin").innerHTML = "已登录";
+        // document.getElementById("pLogin").innerHTML = "已登录";
         //document.getElementById("pReg").innerHTML = uname+",欢迎您;";
+        document.getElementById("exit").onclick = function(){
+            //addCookie("username","",-1);
+            removeCookie("username");
+            document.getElementById("loginBefor").style = "display:block";
+            document.getElementById("loginAfter").style = "display:none;";
+            document.getElementById("loginReg").style = "display:block;";
+            document.getElementById("hello").innerHTML = "请登录";
+        }
     }else{
         document.getElementById("hello").innerHTML = "请登录";
     }
+
 
 </script>

@@ -14,7 +14,7 @@ $(function () {
             $(this).children(".toggle").children(".iconfont-unfold").removeClass('arrow-down');
         }
     });
-    //分类菜单
+
     var mainCategoryList = $('.main-categories-list');
     if ($(mainCategoryList).attr('dataurl') != '' && typeof ($(mainCategoryList).attr('dataurl')) != 'undefined') {
         var categoryDataUrl = $(mainCategoryList).attr('dataurl');
@@ -57,7 +57,6 @@ $(function () {
             }
         });
     });
-    //列表页最多显示三行过滤条件的按钮控制
     for (var i = 0; i < $(".tag-content-inbox").length; i++) {
         var thisObj = $('.tag-content-inbox').eq(i);
         var btnActions = thisObj.parent().parent().parent().find('.actions');
