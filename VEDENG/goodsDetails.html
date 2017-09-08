@@ -953,7 +953,7 @@
 										</span>
                                     </p>
                                 </dd>
-                                <button id="j" style="width:15px;">-</button><input style="width:20px;" type="text" id="num" value="0"><button id="jia" style="width:15px;">+</button>
+                                <button id="j" style="width:15px;">-</button><input style="width:20px;" type="text" id="num" value="1"><button id="jia" style="width:15px;">+</button>
 
                                 <dt>&nbsp;</dt>
                                 <br class="btn-container">
@@ -962,7 +962,7 @@
                                     <a href="#" class="btn btn-lg btn-primary" onclick="" id="contact_tjxj">提交询价</a>
                                     <a target="_blank" class="btn btn-lg btn-primary" id="contact_zxxj" href="#" title="在线询价">在线询价</a>
                                     <a target="_blank" class="btn btn-lg btn-primary" id="contact_qq" href="#" title="QQ咨询">QQ咨询</a>
-                                    <a target="_blank" class="btn btn-lg btn-primary" id="contact_cart" href="#" title="添加购物车">添加购物车</a></br>
+                                    <a class="btn btn-lg btn-primary" id="contact_cart" href="#" title="添加购物车">添加购物车</a></br>
 
                             </dl>
                         </dl>
@@ -1725,12 +1725,45 @@ $("#j").click(function(){
         num=1
     }
     $("#num").val(num)
-})
+});
 $("#jia").click(function(){
     let num = Number($("#num").val())
     num++;
 
     $("#num").val(num)
-})
+});
+setTimeout(function(){
+    $("#contact_cart").click(function() {
+        //alert(1)
+
+        let num = Number($("#num").val())
+        addCookie(id,num,1);
+        $uname = getCookie("username");
+        //alert($uname)
+        $.ajax({
+            url: 'php/addShoppingCart.php',
+            type: 'get',
+
+            data: {
+                "vipName":$uname,
+                "goodsId":id,
+                "goodsCount":num,
+
+            },
+            success:function (data){
+                if(data==1){
+                    alert("添加成功");
+                    location.href="shopCart.html"
+                }else{
+                    alert("失败")
+                }
+
+            }
+
+
+        })
+    });
+
+},100)
 
 </script>

@@ -2,6 +2,7 @@
  * Created by Administrator on 2017/9/1.
  */
 $(function(){
+
     var $allcheckbox = $('input[type="checkbox"]');
     $wholeCheckbox = $(".whole_check");
     $cartBox = $(".cartBox");
