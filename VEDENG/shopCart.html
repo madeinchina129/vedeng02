@@ -899,8 +899,8 @@
                             <label for="all"></label>
                             全选
                         </li>
-                        <li class="list_con">商品信息</li>
-                        <li class="list_info">商品参数</li>
+                        <li class="list_con">商品名称</li>
+                        <li class="list_info">订货号</li>
                         <li class="list_price">单价</li>
                         <li class="list_amount">数量</li>
                         <li class="list_sum">金额</li>
@@ -918,8 +918,8 @@
                             店铺：<a href="javascript:;">搜猎人艺术生活</a>
                         </div>
                     </div>
-                    <div class="order_content">
-                        <ul class="order_lists">
+                    <div id = "order_content" class="order_content">
+                        <!--<ul class="order_lists">
                             <li class="list_chk">
                                 <input type="checkbox" id="checkbox_2" class="son_check">
                                 <label for="checkbox_2"></label>
@@ -1008,7 +1008,7 @@
                             <li class="list_op">
                                 <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
                             </li>
-                        </ul>
+                        </ul>-->
                     </div>
                 </div>
                 <!--底部-->
@@ -1145,48 +1145,242 @@
 <script type="text/javascript" src="js/jquery.aimmenu.js" ></script>
 <script src="js/produCtategory.js"></script>
 <script src = "js/shopCart.js"></script>
+<script type = "text/javascript" src = "js/cookieTools.js"></script>
 <script>
     var sum=0;
+    $uname = getCookie("username");
     $.ajax({
         url:"php/getShoppingCart.php",
         type:"get",
         data:{
-            "vipName":"huang"
+            "vipName":$uname
         },
-        async:false,
+        async:true,
         success:function(data){
+            //console.log(data);
             var d = eval("("+data+")")
             console.log(d)
+
+
+            var $allcheckbox = $('input[type="checkbox"]');
+            $wholeCheckbox = $(".whole_check");
+            $cartBox = $(".cartBox");
+            $shopCheckBox = $(".shopChoice");
+            $sonCheckBox = $(".son_check");
+            $allcheckbox.live("click",function(){
+                if($(this).is(":checked")){
+                    $(this).next("label").addClass("mark");
+                }else{
+                    $(this).next("label").removeClass("mark");
+                }
+            });
+            $wholeCheckbox.live("click",function(){
+                var $checkboxs = $cartBox.find('input[type="checkbox"]');
+                if($(this).is(":checked")){
+                    $checkboxs.prop("checked",true);
+                    $checkboxs.next("label").addClass("mark");
+                }else{
+                    $checkboxs.prop("checked",false);
+                    $checkboxs.next("label").removeClass("mark");
+                }
+                totalMoney();
+            });
+            $sonCheckBox.each(function(){
+                $(this).live("click",function(){
+                    if($(this).is(":checked")) {
+                        var len = $sonCheckBox.length;
+                        var num = 0;
+                        $sonCheckBox.each(function () {
+                            if ($(this).is(":checked")) {
+                                num++;
+                            }
+                        });
+                        if (num == len) {
+                            $wholeCheckbox.prop("checked", true);
+                            $wholeCheckbox.next("label").addClass("mark");
+                        }
+                    }else{
+                        $wholeCheckbox.prop("checked",false);
+                        $wholeCheckbox.next("label").removeClass("mark");
+                    }
+                });
+            });
+            $shopCheckBox.each(function(){
+                $(this).live("click",function(){
+                    if($(this).is(":checked")){
+                        var len = $shopCheckBox.length;
+                        var num = 0;
+                        $shopCheckBox.each(function(){
+                            if($(this).is(":checked")){
+                                num++;
+                            }
+                        });
+                        if(num == len){
+                            $wholeCheckbox.prop("checked", true);
+                            $wholeCheckbox.next("label").addClass("mark");
+                        }
+                        $(this).parents(".cartBox").find(".son_check").prop("checked",true);
+                        $(this).parents(".cartBox").find(".son_check").next("label").addClass("mark");
+                    }else{
+                        $wholeCheckbox.prop("checked",false);
+                        $wholeCheckbox.next("label").removeClass("mark");
+                        $(this).parents(".cartBox").find(".son_check").prop("checked",false);
+                        $(this).parents(".cartBox").find(".son_check").next("label").removeClass("mark");
+                    }
+                    totalMoney();
+                });
+            });
+            $cartBox.each(function(){
+                var $this = $(this);
+                var $sonChecks = $this.find(".son_check");
+                $sonChecks.each(function(){
+                    $(this).live("click",function(){
+                        if($(this).is(":checked")){
+                            var len = $sonChecks.length;
+                            var num = 0;
+                            $sonChecks.each(function(){
+                                if($(this).is(":checked")){
+                                    num++;
+                                }
+                            });
+                            if(num == len){
+                                $(this).parents(".cartBox").find(".shopChoice").prop("checked",true);
+                                $(this).parents(".cartBox").find(".shopChoice").next("label").addClass("mark");
+                            }
+                        }else{
+                            $(this).parents(".cartBox").find(".shopChoice").prop("checked",false);
+                            $(this).parents(".cartBox").find(".shopChoice").next("label").removeClass("mark");
+                        }
+                        totalMoney();
+                    });
+                });
+            });
+
+
+
             var str=""
             for (var i = 0; i < d.length; i++) {
-                str+='<div class="shop">' +
-                        '<img src="'+d[i].beiyong1+'" alt="">' +
-                        '名字<span>'+d[i].goodsName+'</span>' +
-                        '单价$<span >'+d[i].goodsPrice+'</span>' +
-                        '数量<span class="shuliang">'+getCookie(d[i].goodsId)+'</span>' +
-                        '总价<span class="zong">'+d[i].goodsPrice* getCookie(d[i].goodsId)+'</span>' +
-                        '<button class="remove" goodsId="'+d[i].goodsId+'">删除</button><input type="button" class="addshop" value="+">' +
-                        '</div>'
+                str+='<ul class="order_lists">'
+                        +	'<li class="list_chk"><input type="checkbox" id="checkbox_2" class="son_check"><label for="checkbox_2"></label></li>'
+                        +	'<li class="list_con"><div class="list_img"><a href="javascript:;"><img src="images/'+d[i].goodsImg+'" alt=""></a></div><div class="list_text"><a href="javascript:;">'+d[i].goodsName+'</a></div></li>'
+                        +	'<li class="list_info"><p>'+d[i].beiyong1+'</p></li>'
+                        +	'<li class="list_price"><p class="price">'+d[i].goodsPrice+'</p></li>'
+                        +	'<li class="list_amount"><div class="amount_box"><a href="javascript:;" class="reduce reSty">-</a><input type="text" value="'+getCookie(d[i].goodsId)+'"  class="sum"><a href="javascript:;" class="plus">+</a></div></li>'
+                        +	'<li class="list_sum"><p class="sum_price" id = "sum">980</p></li>'
+                        +	'<li class="list_op"><p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p></li>'
+                        +	'</ul>'
+                sum+=d[i].goodsPrice* getCookie(d[i].goodsId);
+                totalMoney()
+                var price=d[i].goodsPrice;
+                console.log(price)
 
 
-                sum+=d[i].goodsPrice* getCookie(d[i].goodsId)
+
+
+
+                //数量加
+                var $plus = $('.plus'),
+                        $reduce = $('.reduce'),
+                        $all_sum = $('#sum');
+                $plus.live("click",function () {
+                    var $inputVal = $(this).prev('input'),
+                            $count = parseInt($inputVal.val())+1,
+
+                            $obj = $(this).parents('.amount_box').find('.reduce'),
+                            $priceTotalObj = $(this).parents('.order_lists').find('.sum_price'),
+                            $price = $(this).parents('.order_lists').find('.price').html(),  //单价
+                            $priceTotal = $count*price;
+                    if($inputVal.val() == ""){
+                        return;
+                    }
+                    $inputVal.val($count);
+                    $priceTotalObj.html($priceTotal);
+                    if($inputVal.val()>1 && $obj.hasClass('reSty')){
+                        $obj.removeClass('reSty');
+                    }
+                    totalMoney();
+                });
+                //数量减
+                $reduce.live("click",function () {
+                    var $inputVal = $(this).next('input'),
+                            $count = parseInt($inputVal.val())-1,
+                            $priceTotalObj = $(this).parents('.order_lists').find('.sum_price'),
+                            $price = $(this).parents('.order_lists').find('.price').html(),  //单价
+                            $priceTotal = $count*price;
+                    if($inputVal.val()>1){
+                        $inputVal.val($count);
+                        $priceTotalObj.html($priceTotal);
+                    }
+                    if($inputVal.val()==1 && !$(this).hasClass('reSty')){
+                        $(this).addClass('reSty');
+                    }
+                    totalMoney();
+                });
+                $all_sum.live("keyup",function () {
+                    var $count = 0,
+                            $priceTotalObj = $(this).parents('.order_lists').find('.sum_price'),
+                            $price = $(this).parents('.order_lists').find('.price').html(),  //单价
+                            $priceTotal = 0;
+                    if($(this).val()==''){
+                        $(this).val('1');
+                    }
+                    $(this).val($(this).val().replace(/\D|^0/g,''));
+                    $count = $(this).val();
+                    $priceTotal = $count*price;
+                    $(this).attr('value',$count);
+                    $priceTotalObj.html($priceTotal);
+                    totalMoney();
+                });
+                function totalMoney() {
+                    var total_money = 0;
+                    var total_count = 0;
+                    var calBtn = $('.calBtn a');
+                    /*$sonCheckBox.each(function () {
+                        if ($(this).is(':checked')) {*/
+                    $('.sum_price').each(function(i){
+                        if($(".son_check").eq(i).attr("checked")=="checked") {
+                            var goods = parseInt($('.sum_price').html());
+                            var num = parseInt($('.sum').val());
+                            total_money += goods;
+                            console.log(total_money);
+                            total_count += num;
+                            console.log(total_count);
+                        }
+                    });
+                        /*}
+                    });*/
+                    $('.total_text').html('￥'+total_money);
+                    $('.piece_num').html(total_count);
+
+                    //console.log(total_money,total_count);
+
+                    if(total_money!=0 && total_count!=0){
+                        if(!calBtn.hasClass('btn_sty')){
+                            calBtn.addClass('btn_sty');
+                        }
+                    }else{
+                        if(calBtn.hasClass('btn_sty')){
+                            calBtn.removeClass('btn_sty');
+                        }
+                    }
+                }
             }
 
-            $("#wrap").html(str)
-            $("#sum").html(sum)
+            $("#order_content").html(str);
+            $("#sum").html(sum);
 
         }
 
     })
 
     //删除
-    $("#wrap").on("click",".remove",function(){
+    $(".opBtn").on("click",".dialog-sure",function(){
         $.ajax({
-            url: 'deleteGoods.php',
+            url: 'php/deleteGoods.php',
             type: 'get',
 
             data: {
-                "vipName": 'huang',
+                "vipName": $uname,
                 "goodsId": $(this).attr("goodsId"),
             },
             success:function(data){
@@ -1194,7 +1388,7 @@
                     alert("删除成功");
                     location.href="car.html"
                 }else{
-                    alert("失败")
+                    alert("失败");
                 }
             }
         })

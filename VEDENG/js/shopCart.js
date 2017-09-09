@@ -3,19 +3,19 @@
  */
 $(function(){
 
-    var $allcheckbox = $('input[type="checkbox"]');
+    /*var $allcheckbox = $('input[type="checkbox"]');
     $wholeCheckbox = $(".whole_check");
     $cartBox = $(".cartBox");
     $shopCheckBox = $(".shopChoice");
     $sonCheckBox = $(".son_check");
-    $allcheckbox.click(function(){
+    $allcheckbox.live("click",function(){
         if($(this).is(":checked")){
             $(this).next("label").addClass("mark");
         }else{
             $(this).next("label").removeClass("mark");
         }
     });
-    $wholeCheckbox.click(function(){
+    $wholeCheckbox.live("click",function(){
         var $checkboxs = $cartBox.find('input[type="checkbox"]');
         if($(this).is(":checked")){
             $checkboxs.prop("checked",true);
@@ -27,7 +27,7 @@ $(function(){
        totalMoney();
     });
     $sonCheckBox.each(function(){
-        $(this).click(function(){
+        $(this).live("click",function(){
             if($(this).is(":checked")) {
                 var len = $sonCheckBox.length;
                 var num = 0;
@@ -47,7 +47,7 @@ $(function(){
         });
     });
     $shopCheckBox.each(function(){
-        $(this).click(function(){
+        $(this).live("click",function(){
             if($(this).is(":checked")){
                 var len = $shopCheckBox.length;
                 var num = 0;
@@ -75,7 +75,7 @@ $(function(){
         var $this = $(this);
         var $sonChecks = $this.find(".son_check");
         $sonChecks.each(function(){
-            $(this).click(function(){
+            $(this).live("click",function(){
                 if($(this).is(":checked")){
                     var len = $sonChecks.length;
                     var num = 0;
@@ -95,13 +95,13 @@ $(function(){
                 totalMoney();
             });
         });
-    });
+    });*/
 
     //商品数量
-    var $plus = $('.plus'),
+    /*var $plus = $('.plus'),
         $reduce = $('.reduce'),
         $all_sum = $('.sum');
-    $plus.click(function () {
+    $plus.live("click",function () {
         var $inputVal = $(this).prev('input'),
             $count = parseInt($inputVal.val())+1,
 
@@ -119,8 +119,7 @@ $(function(){
         }
         totalMoney();
     });
-
-    $reduce.click(function () {
+    $reduce.live("click",function () {
         var $inputVal = $(this).next('input'),
             $count = parseInt($inputVal.val())-1,
             $priceTotalObj = $(this).parents('.order_lists').find('.sum_price'),
@@ -135,8 +134,7 @@ $(function(){
         }
         totalMoney();
     });
-
-    $all_sum.keyup(function () {
+    $all_sum.live("keyup",function () {
         var $count = 0,
             $priceTotalObj = $(this).parents('.order_lists').find('.sum_price'),
             $price = $(this).parents('.order_lists').find('.price').html(),  //单价
@@ -151,12 +149,11 @@ $(function(){
         $priceTotalObj.html('￥'+$priceTotal);
         totalMoney();
     })
-
+     */
     //移除商品
-
     var $order_lists = null;
     var $order_content = '';
-    $('.delBtn').click(function () {
+    $('.delBtn').live("click",function () {
         $order_lists = $(this).parents('.order_lists');
         $order_content = $order_lists.parents('.order_content');
         $('.model_bg').fadeIn(300);
@@ -164,10 +161,10 @@ $(function(){
     });
 
     //关闭模态框
-    $('.closeModel').click(function () {
+    $('.closeModel').live("click",function () {
         closeM();
     });
-    $('.dialog-close').click(function () {
+    $('.dialog-close').live("click",function () {
         closeM();
     });
     function closeM() {
@@ -175,7 +172,7 @@ $(function(){
         $('.my_model').fadeOut(300);
     }
     //确定按钮，移除商品
-    $('.dialog-sure').click(function () {
+    $('.dialog-sure').live("click",function () {
         $order_lists.remove();
         if($order_content.html().trim() == null || $order_content.html().trim().length == 0){
             $order_content.parents('.cartBox').remove();

@@ -24,7 +24,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.9">
+            <state vertical-scroll-proportion="0.0">
               <caret line="1431" column="35" selection-start-line="1431" selection-start-column="27" selection-end-line="1431" selection-end-column="35" />
               <folding>
                 <element signature="n#style#0;n#ul#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -45,8 +45,8 @@
       <file leaf-file-name="category.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/category.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.5">
-              <caret line="1155" column="61" selection-start-line="1155" selection-start-column="61" selection-end-line="1155" selection-end-column="79" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1166" column="40" selection-start-line="1166" selection-start-column="40" selection-end-line="1166" selection-end-column="40" />
               <folding>
                 <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -69,8 +69,8 @@
       <file leaf-file-name="goodsDetails.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/goodsDetails.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-37.633335">
-              <caret line="1755" column="43" selection-start-line="1755" selection-start-column="43" selection-end-line="1755" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1645" column="0" selection-start-line="1645" selection-start-column="0" selection-end-line="1645" selection-end-column="68" />
               <folding>
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -112,8 +112,8 @@
       <file leaf-file-name="shopCart.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/shopCart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3772563">
-              <caret line="1162" column="25" selection-start-line="1161" selection-start-column="40" selection-end-line="1162" selection-end-column="25" />
+            <state vertical-scroll-proportion="2.366426">
+              <caret line="1388" column="44" selection-start-line="1388" selection-start-column="44" selection-end-line="1388" selection-end-column="44" />
               <folding>
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -137,7 +137,7 @@
         <entry file="file://$PROJECT_DIR$/js/shopCart.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <caret line="5" column="6" selection-start-line="5" selection-start-column="4" selection-end-line="97" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -146,7 +146,7 @@
       <file leaf-file-name="car.html" pinned="false" current-in-tab="false">
         <entry file="file://D:/Documents/Desktop/新建文件夹 (2)/goodsAndShoppingCart/car.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.5">
+            <state vertical-scroll-proportion="0.0">
               <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="96" selection-end-column="6" />
               <folding />
             </state>
@@ -188,11 +188,11 @@
         <option value="$PROJECT_DIR$/js/category.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/php/getGoodsList.php" />
-        <option value="$PROJECT_DIR$/category.html" />
         <option value="$PROJECT_DIR$/php/getGoodsInfo.php" />
         <option value="$PROJECT_DIR$/js/produCtategory.js" />
         <option value="$PROJECT_DIR$/css/goodsDetails.css" />
         <option value="$PROJECT_DIR$/goodsDetails.html" />
+        <option value="$PROJECT_DIR$/category.html" />
         <option value="$PROJECT_DIR$/js/shopCart.js" />
         <option value="$PROJECT_DIR$/shopCart.html" />
       </list>
@@ -206,8 +206,7 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="1" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -250,8 +249,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -389,8 +388,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
-    <editor active="true" />
+    <frame x="1" y="0" width="1382" height="744" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17559524" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -529,13 +528,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/js/maps/swiper.min.js.map">
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/images/site_logo.png">
@@ -699,7 +698,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="102" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -715,7 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -737,7 +734,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="29" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -753,13 +749,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.033334">
           <caret line="109" column="6" selection-start-line="73" selection-start-column="0" selection-end-line="109" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Documents/Desktop/新建文件夹 (2)/goodsAndShoppingCart/car.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="96" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/getGoodsList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="52" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.9">
+        <state vertical-scroll-proportion="0.0">
           <caret line="1431" column="35" selection-start-line="1431" selection-start-column="27" selection-end-line="1431" selection-end-column="35" />
           <folding>
             <element signature="n#style#0;n#ul#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -776,18 +787,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/getGoodsList.php">
+    <entry file="file://$PROJECT_DIR$/php/getShoppingCart.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="52" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="52" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/addShoppingCart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/category.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5">
-          <caret line="1155" column="61" selection-start-line="1155" selection-start-column="61" selection-end-line="1155" selection-end-column="79" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1166" column="40" selection-start-line="1166" selection-start-column="40" selection-end-line="1166" selection-end-column="40" />
           <folding>
             <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -796,18 +815,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/shopCart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/goodsDetails.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-37.633335">
-          <caret line="1755" column="43" selection-start-line="1755" selection-start-column="43" selection-end-line="1755" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1645" column="0" selection-start-line="1645" selection-start-column="0" selection-end-line="1645" selection-end-column="68" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -833,34 +844,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/addShoppingCart.php">
+    <entry file="file://$PROJECT_DIR$/js/shopCart.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Documents/Desktop/新建文件夹 (2)/goodsAndShoppingCart/car.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5">
-          <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="96" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/getShoppingCart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="4" selection-end-line="97" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shopCart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3772563">
-          <caret line="1162" column="25" selection-start-line="1161" selection-start-column="40" selection-end-line="1162" selection-end-column="25" />
+        <state vertical-scroll-proportion="2.366426">
+          <caret line="1388" column="44" selection-start-line="1388" selection-start-column="44" selection-end-line="1388" selection-end-column="44" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
