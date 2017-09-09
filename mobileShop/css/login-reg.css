@@ -1,0 +1,105 @@
+header{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    background:#f1f1f1;
+}
+header .back-off{
+    display:block;
+    width:0.4rem;
+    line-height:0.4rem;
+}
+header .back-off span{
+    display:block;
+    width:0.4rem;
+    font-size:36px;
+    padding:5px 10px;
+}
+header .head-min{
+    text-align:center;
+    font-size:9px;
+    display:flex;
+    align-items:center;
+
+}
+header .head-min h1{
+    font-weight:normal;
+}
+
+header .back-on{
+    display:block;
+    width:0.4rem;
+    line-height:0.4rem;
+}
+header .back-on span{
+    display:none;
+    width:0.4rem;
+    font-size:36px;
+    padding:5px 10px;
+}
+section .head-top{
+    width:100%;
+
+}
+section .loginForm{
+    display:flex;
+    flex-flow:column;
+    padding:0.2rem 0 0 0.1rem;
+}
+section .loginForm h3{
+    height:0.3rem;
+    line-height:0.3rem;
+    font-size:14px;
+    font-weight:normal;
+}
+section .loginForm h3 .reg{
+    color:#f60;
+}
+section .loginForm .inpBox{
+    padding:0 0.08rem;
+    background:#fff;
+
+}
+section .loginForm .inpBox .inpList{
+    border-bottom:1px solid #ddd;
+}
+section .loginForm .inpBox .inpList2{
+    display:flex;
+    align-items:center;
+}
+section .loginForm .inpBox .inpList2 button{
+    border:0;
+    margin:0 3px;
+    width:28%;
+    height:0.36rem;
+    line-height:0.36rem;
+    background:#f60;
+    color:#fff;
+    border-radius:3px;
+}
+section .loginForm .inpBox input{
+    border:0;
+    height:0.45rem;
+    line-height:0.45rem;
+    background:none;
+    display:flex;
+    font-size:16px;
+}
+section .loginForm .inpList input{
+    width:100%;
+}
+section .loginForm .loginSub{
+    padding:0.2rem 0.1rem;
+}
+section .loginForm .loginSub input{
+    display:block;
+    width:100%;
+    height:0.4rem;
+    line-height:0.4rem;
+    font-size:16px;
+    text-align:center;
+    background:#f60;
+    color:#fff;
+    border:0;
+    border-radius:3px;
+}

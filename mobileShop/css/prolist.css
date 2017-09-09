@@ -1,0 +1,107 @@
+header .head-min{
+    width:100%;
+}
+
+header .head-min .proSearch{
+    width:3rem;
+}
+
+header .head-min .proSearch input{
+    width:80%;
+    height:0.3rem;
+    line-height:0.3rem;
+    background:#ddd;
+    border:1px solid #ccc;
+    border-radius:3px;
+}
+
+section{
+    margin-bottom:0.1rem;
+
+}
+section .proSelect{
+    //width:100%;
+    height:0.3rem;
+    margin:0.1rem 0;
+    border:1px solid #ddd;
+    border-radius:3px;
+}
+section .proSelect ul{
+    display:flex;
+}
+section .proSelect ul li{
+    width:33.3%;
+    border-right:1px solid #ddd;
+}
+section .proSelect ul li a{
+    display:block;
+    width:100%;
+    height:0.3rem;
+    line-height:0.3rem;
+    text-align:center;
+    font-size:16px;
+}
+section .proSelect ul .proListCol a{
+    background:#f60;
+    color:#fff;
+}
+section .morePro .proList{
+    padding:0 10px;
+    display:flex;
+    flex-flow:column;
+}
+section .morePro .proList dl{
+    padding:10px 0;
+    border-bottom:1px solid #ddd;
+    display:flex;
+    justify-content:center;
+    padding-left:0.1rem;
+}
+section .morePro .proList dl dt{
+    width:20%;
+    display:flex;
+    justify-content:center;
+}
+section .morePro .proList dl dd{
+    width:80%;
+    padding-left:0.1rem;
+    display:flex;
+    flex-flow:column;
+}
+section .morePro .proList dl dd h3{
+    font-size:12px;
+    font-weight:bold;
+    line-height:0.2rem;
+}
+section .morePro .proList dl dd .prolist-price{
+    font-size:12px;
+    color:#f60;
+    height:0.2rem;
+    line-height:0.2rem;
+    display:flex;
+}
+section .morePro .proList dl dd .prolist-price span{
+
+    color:#999;
+    text-decoration:line-through;
+    margin-left:10px;
+}
+section .morePro .proList dl dd .prolist-yishou{
+    font-size:12px;
+    display:flex;
+}
+section .morePro .proList dl dd .prolist-yishou span{
+    display:block;
+    font-size:12px;
+    width:0.5rem;
+    height:0.2rem;
+    line-height:0.2rem;
+    text-align:center;
+    color:#fff;
+    background:#f60;
+}
+section .morePro .proList dl dd .prolist-yishou em{
+    font-style:normal;
+
+    color:#999;
+}

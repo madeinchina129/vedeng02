@@ -1,0 +1,299 @@
+header {
+    width:100%;
+    display: flex;
+    flex-flow: column;
+}
+header .head-top{
+    width:100%;
+    position:relative;
+}
+/*header .head-top img{
+    width:100%;
+    height:1.345rem;
+}*/
+header .head-top dl{
+    width:100%;
+    height:0.45rem;
+    position:absolute;
+    left:0;
+    bottom:-0.35rem;
+    padding:0.025rem 0.05rem;
+    border-bottom: 1px solid #ddd;
+    display:flex;
+    justify-content:space-between;
+}
+header .head-top dl dt{
+    display: flex;
+    justify-content: center;
+    width:20%;
+}
+header .head-top dl dt a{
+    display:block;
+    width:0.35rem;
+    height:0.35rem;
+    border:1px solid #fff;
+}
+header .head-top dl dd{
+    display:flex;
+    flex-flow:column;
+    width:80%;
+
+}
+header .head-top dl dd .username{
+    height:0.15rem;
+    line-height:0.1rem;
+    color:#fff;
+    font-size:16px;
+    font-weight:bold;
+}
+header .head-top dl dd ul{
+    display:flex;
+    justify-content:space-between;
+}
+header .head-top dl dd ul li{
+    width:33.3%;
+    text-align: center;
+    background: url(../images/xian0.jpg) right center no-repeat;
+    display:flex;
+    flex-flow:column;
+}
+
+header .head-top dl dd ul li strong{
+    display:block;
+    font-size:12px;
+    height:0.125rem;
+    line-height:0.125rem;
+    margin-top:0.025rem;
+}
+header .head-top dl dd ul li .iconfont{
+    display:block;
+    font-size:12px;
+    height:0.125rem;
+    line-height:0.125rem;
+    margin-top:0.025rem;
+}
+header .head-top dl dd ul li p{
+    font-size:12px;
+    color:#666;
+
+}
+section{
+    /*flex:1;
+    overflow-y:scroll;*/
+    /*height:2000px;*/
+    /*height:50%;*/
+    margin-bottom:0.6rem;
+}
+section .search{
+    width:100%;
+    padding:0 0.01rem 0;
+    height:0.25rem;
+    display:flex;
+    justify-content:space-between;
+    margin-top:0.45rem;
+
+}
+.seaTxt{
+    width:75%;
+    height:0.3rem;
+    line-height:0.3rem;
+    border:1px solid #ddd;
+    border-radius:3px;
+    background: #f6f6f6;
+    margin:0 6px;
+}
+.seaBtn{
+    width:18%;
+    height:0.31rem;
+    line-height:0.31rem;
+    border:1px solid #ddd;
+    border-radius:3px;
+    background: #f60;
+    color:#fff;
+    font-size:16px;
+    margin-right:8px;
+}
+section .regLogUL{
+    display:flex;
+    justify-content:space-between;
+    margin:0.2rem 0.05rem 0.05rem;
+}
+section .regLogUL li{
+    width:50%;
+    padding:0 5px;
+}
+section .regLogUL li .login{
+    display:block;
+    font-size:16px;
+    height:0.3rem;
+    line-height:0.3rem;
+    text-align:center;
+    background:#f60;
+    color:#fff;
+    border-radius:3px;
+}
+section .regLogUL li .register{
+    display:block;
+    font-size:16px;
+    height:0.3rem;
+    line-height:0.3rem;
+    text-align:center;
+    background:#06F;
+    color:#fff;
+    border-radius:3px;
+}
+.swiper-container {
+    width: 100%;
+    height: 2.3rem;
+}
+.swiper-container img{
+    width: 100%;
+    height: 100%;
+}
+section .pronav{
+    padding:5px;
+    display:flex;
+    justify-content:center;
+    flex-flow:wrap;
+}
+section .pronav li{
+    padding:5px;
+    width:46%;
+}
+section .pronav li a{
+    display:block;
+    width:100%;
+    height:0.35rem;
+    line-height:0.35rem;
+    text-align:center;
+    background:#f60;
+    color:#fff;
+    font-size:16px;
+}
+section .index-pro{
+    padding:5px;
+    display:flex;
+    justify-content:center;
+    flex-flow:wrap;
+}
+section .index-pro .index-pro-list{
+    width:46%;
+    padding:5px;
+
+}
+section .index-pro .index-pro-list dl{
+    padding:5px;
+    border:1px solid #ddd;
+    display:flex;
+    flex-flow:column;
+}
+section .index-pro .index-pro-list dl dt{
+    text-align:center;
+}
+section .index-pro .index-pro-list dl .ip-text{
+    height:0.4rem;
+    line-height:0.4rem;
+    font-size:12px;
+    border-top:2px solid #ddd;
+    border-bottom:1px solid #ddd;
+    display: flex;
+    justify-content:center;
+}
+section .index-pro .index-pro-list dl .ip-text span{
+    font-size:12px;
+    color:#999;
+    margin-left:10px;
+}
+section .index-pro .index-pro-list dl .ip-price{
+    height:0.3rem;
+    line-height:0.3rem;
+    color:#f60;
+    font-size:12px;
+    display:flex;
+    justify-content:center;
+}
+section .index-pro .index-pro-list dl .ip-price span{
+    color:#999;
+    text-decoration:line-through;
+    margin-left:10px;
+}
+section .morePro .proList{
+    padding:0 10px;
+    display:flex;
+    flex-flow:column;
+}
+section .morePro .proList dl{
+    padding:10px 0;
+    border-bottom:1px solid #ddd;
+    display:flex;
+    justify-content:center;
+    padding-left:0.1rem;
+}
+section .morePro .proList dl dt{
+    width:20%;
+    display:flex;
+    justify-content:center;
+}
+section .morePro .proList dl dd{
+    width:80%;
+    padding-left:0.1rem;
+    display:flex;
+    flex-flow:column;
+}
+section .morePro .proList dl dd h3{
+    font-size:12px;
+    font-weight:bold;
+    line-height:0.2rem;
+}
+section .morePro .proList dl dd .prolist-price{
+    font-size:12px;
+    color:#f60;
+    height:0.2rem;
+    line-height:0.2rem;
+    display:flex;
+}
+section .morePro .proList dl dd .prolist-price span{
+
+    color:#999;
+    text-decoration:line-through;
+    margin-left:10px;
+}
+section .morePro .proList dl dd .prolist-yishou{
+    font-size:12px;
+    display:flex;
+}
+section .morePro .proList dl dd .prolist-yishou span{
+    display:block;
+    font-size:12px;
+    width:0.5rem;
+    height:0.2rem;
+    line-height:0.2rem;
+    text-align:center;
+    color:#fff;
+    background:#f60;
+}
+section .morePro .proList dl dd .prolist-yishou em{
+    font-style:normal;
+
+    color:#999;
+}
+section .joins{
+    padding:0.1rem;
+}
+section .copyRight{
+    height:0.35rem;
+    line-height:0.35rem;
+    text-align:center;
+    font-size:16px;
+}
+
+section .copyRight span{
+    padding-left:10px;
+    color:#00A1FF;
+}
+
+
+
+
+
+
