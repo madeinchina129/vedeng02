@@ -25,18 +25,26 @@
     <div class = "head-top">
         <img src = "images/head.jpg"/>
     </div>
-    <form action = "#" method = "get" class="loginForm">
+    <form action = "#" method = "post" class="loginForm">
         <h3>还没有会员账号？点此<a href="register.html" class = "reg">注册</a></h3>
         <div class="inpBox">
             <div class="inpList">
-                <input type="text" placeholder = "请输入用户名"/>
+                <input type="text" name="username" id="uname" placeholder = "请输入用户名"/>
             </div>
             <div class="inpList">
-                <input type="password" placeholder = "请输入密码"/>
+                <input type="password" name="password" id="password" placeholder = "请输入密码"/>
             </div>
         </div>
+
+        <div class="item-input" style="font-size: 14px;display: flex;margin-top:10px;">
+            <input style="width: 15px; margin-right:10px; margin-left:10px; height:15px;display: flex;" type="checkbox" name="remember" id="checkBox" class="">
+            <label for="checkBox" style="font-size: 14px;" class="">记住密码</label><div class="input-content">
+            <!-- <span class="error-text">密码不正确</span>-->
+        </div>
+        </div>
+        <div class = "error" style="font-size: 14px;height:0.3rem;color:#FF554B;margin-top:10px;"><span class="error-text"></span> </div>
         <div class="loginSub">
-            <input type = "submit" value="立即登录"/>
+            <input type = "button" id="formSubmit" value="立即登录"/>
         </div>
     </form>
 </section>
@@ -50,3 +58,33 @@
 </footer>
 </body>
 </html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+<script type = "text/javascript" src = "js/cookieTools.js"></script>
+<script>
+    $(function(){
+
+        $("#formSubmit").click(function(){
+            $.post("php/login.php",
+                    {
+                        "username":$("#uname").val(),
+                        "password":$("#password").val(),
+                        "remember":$("#checkBox").val(),
+                    },
+                    function(str){
+                        //alert(str)
+                        if(str=="on"){
+                            //保存cookie
+                           // alert(1)
+                            addCookie("mobileUname",$("#uname").val(),7);
+                            location.href="index.html";
+                        }else{
+                           // alert(2)
+                            $(".error-text").html("用户名或者密码错误，登录失败！");
+                        }
+
+                    }
+            );
+
+        });
+    });
+</script>
